@@ -129,7 +129,11 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
       .map(m => ({ role: m.role === 'oracle' ? 'assistant' : 'user', content: m.content }));
 
     try {
-      const res = await fetch('http://localhost:3001/api/oracle', {
+      const apiUrl = import.meta.env.PROD 
+        ? '/api/oracle' 
+        : 'http://localhost:3001/api/oracle';
+      
+      const res = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
