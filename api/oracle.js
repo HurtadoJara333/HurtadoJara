@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'nvidia/z-ai/glm5',
+        model: 'nvidia/llama-3.1-nemotron-70b-instruct',
         max_tokens: 800,
         temperature: 0.7,
         top_p: 0.9,
