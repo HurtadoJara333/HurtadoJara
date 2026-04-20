@@ -25,8 +25,8 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: 'nvidia/nemotron-mini-4b-instruct',
-        max_tokens: 1024,
-        temperature: 0.2,
+        max_tokens: 4096,
+        temperature: 0.7,
         top_p: 0.7,
         stream: false,
         messages,
