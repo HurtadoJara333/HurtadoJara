@@ -50,7 +50,7 @@ const App: React.FC = () => {
         <div className="cursor-ring" id="cursor-ring" />
         <div className="noise-overlay" />
         <ScrollProgress />
-        <Navbar activeSection={activeSection} scrolled={scrolled} onOpenOracle={toggleOracle} />
+        <Navbar activeSection={activeSection} scrolled={scrolled} />
         <main>
           <section id="inicio">      <Hero onOpenOracle={toggleOracle} />  </section>
           <section id="proyectos">   <Projects />   </section>

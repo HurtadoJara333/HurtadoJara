@@ -4,7 +4,6 @@ import './Navbar.css';
 interface NavbarProps {
   activeSection: string;
   scrolled: boolean;
-  onOpenOracle: () => void;
 }
 
 const navLinks = [
@@ -15,7 +14,7 @@ const navLinks = [
   { id: 'contacto',    label: 'Contacto' },
 ];
 
-const Navbar: React.FC<NavbarProps> = ({ activeSection, scrolled, onOpenOracle }) => {
+const Navbar: React.FC<NavbarProps> = ({ activeSection, scrolled }) => {
   const handleClick = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };

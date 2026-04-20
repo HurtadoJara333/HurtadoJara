@@ -15,27 +15,43 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'TaskFlow',
-    subtitle: 'Gestión de tareas',
-    description: 'Aplicación de gestión de tareas con interfaz intuitiva y flujos de trabajo optimizados. Construida con React y TypeScript, con persistencia en tiempo real.',
-    tags: ['React', 'TypeScript', 'Node.js'],
-    link: 'https://pt-taskflow-andres-hurtado.vercel.app/',
-    repo: 'https://github.com/HurtadoJara333/pt-taskflow-Andres-Hurtado',
+    title: 'RentaVerse',
+    subtitle: 'Showroom 3D para Rent-a-Car',
+    description: 'Plataforma inmersiva que permite a negocios de alquiler de vehículos mostrar su flota en un entorno 3D navegable, con iluminación cinematográfica, post-processing y reflejos HDRI en tiempo real.',
+    tags: ['Next.js', 'Three.js', 'React Three Fiber', 'TypeScript'],
+    link: 'https://rentaverse-2-0.vercel.app/',
+    repo: 'https://github.com/HurtadoJara333/Rentaverse-2.0',
     featured: true,
   },
   {
     id: 2,
-    title: 'Bankruptn-T',
-    subtitle: 'Plataforma financiera',
-    description: 'Plataforma financiera con sistema de autenticación seguro, dashboard de métricas y gestión de datos en tiempo real.',
-    tags: ['React', 'TypeScript', 'Auth', 'Dashboard'],
+    title: "Bankruptn't",
+    subtitle: 'Banca digital',
+    description: 'Aplicación web de banca digital con autenticación JWT, login facial con face-api.js, dashboard de transacciones y gestión de saldo en tiempo real.',
+    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
     link: 'https://bankruptn-t-eight.vercel.app/login',
     repo: 'https://github.com/HurtadoJara333/bankruptn-t',
+  },
+  {
+    id: 3,
+    title: 'Karaolycs',
+    subtitle: 'Karaoke Teleprompter',
+    description: 'App de karaoke que detecta automáticamente la canción que suena y muestra las letras sincronizadas en tiempo real usando ACRCloud y LRCLIB.',
+    tags: ['Next.js', 'Python', 'FastAPI', 'ACRCloud'],
+    repo: 'https://github.com/HurtadoJara333/karaolycs',
+  },
+  {
+    id: 4,
+    title: 'TaskFlow',
+    subtitle: 'Gestión de tareas con IA',
+    description: 'App de gestión de tareas con interfaz conversacional estilo Cortana. Controla tareas con lenguaje natural gracias a Groq LLM (Llama 3.3 70B).',
+    tags: ['Next.js', 'React', 'TypeScript', 'Groq AI'],
+    link: 'https://pt-taskflow-andres-hurtado.vercel.app/',
+    repo: 'https://github.com/HurtadoJara333/pt-taskflow-Andres-Hurtado',
   },
 ];
 
 const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
-  const [hovered, setHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -46,7 +62,6 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
   };
 
   const handleMouseLeave = () => {
-    setHovered(false);
     cardRef.current!.style.transform = '';
   };
 
@@ -55,7 +70,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       ref={cardRef}
       className={`project-card ${project.featured ? 'project-card--featured' : ''}`}
       style={{ animationDelay: `${index * 0.12}s` }}
-      onMouseEnter={() => setHovered(true)}
+      onMouseEnter={() => {}}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >

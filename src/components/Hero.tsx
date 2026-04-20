@@ -195,12 +195,11 @@ const Hero: React.FC<HeroProps> = ({ onOpenOracle }) => {
     );
     camera.position.z = 5;
 
-    const PX = -0.02,
-      PY = -0.34;
-    const getFX = () => PX * getAspect(),
-      getFY = () => PY;
-    let FX = getFX(),
-      FY = getFY();
+  const PX = -0.02,
+    PY = -0.34;
+  const getFX = () => PX * getAspect(),
+    getFY = () => PY;
+  let FY = getFY();
 
     const N = 26,
       VERTS = 4;
@@ -354,18 +353,17 @@ const Hero: React.FC<HeroProps> = ({ onOpenOracle }) => {
       };
     };
     hero.addEventListener("mousemove", onMouse);
-    const onResize = () => {
-      renderer.setSize(W(), H());
-      const a = getAspect();
-      camera.left = -a;
-      camera.right = a;
-      camera.top = 1;
-      camera.bottom = -1;
-      camera.updateProjectionMatrix();
-      FX = getFX();
-      FY = getFY();
-      flameMesh.position.y = FY;
-    };
+  const onResize = () => {
+    renderer.setSize(W(), H());
+    const a = getAspect();
+    camera.left = -a;
+    camera.right = a;
+    camera.top = 1;
+    camera.bottom = -1;
+    camera.updateProjectionMatrix();
+    FY = getFY();
+    flameMesh.position.y = FY;
+  };
     window.addEventListener("resize", onResize);
 
     let raf: number;
