@@ -27,3 +27,11 @@ declare module '*.webp' {
   const src: string;
   export default src;
 }
+
+interface ImportMetaEnv {
+  readonly PROD: boolean;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
