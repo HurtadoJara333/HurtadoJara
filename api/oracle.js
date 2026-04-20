@@ -24,9 +24,9 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'nvidia/nemotron-mini-4b-instruct',
-        max_tokens: 3000,
-        temperature: 0.7,
+        model: 'meta/llama-3.3-70b-instruct',
+        max_tokens: 1024,
+        temperature: 0.2,
         top_p: 0.7,
         stream: false,
         messages,
