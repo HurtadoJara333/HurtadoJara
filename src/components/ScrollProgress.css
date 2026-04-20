@@ -1,0 +1,34 @@
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 9999;
+  background: rgba(20,14,3,0.6);
+  pointer-events: none;
+}
+
+.scroll-progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg,
+    #ED8A09 0%,
+    #E5B321 40%,
+    #FEDB2D 70%,
+    #F4C26C 100%
+  );
+  transition: width 0.08s linear;
+  box-shadow: 0 0 8px rgba(254,219,45,0.5);
+}
+
+.scroll-progress__tip {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FEDB2D;
+  box-shadow: 0 0 8px #FEDB2D, 0 0 16px rgba(254,219,45,0.5);
+  transition: left 0.08s linear;
+}

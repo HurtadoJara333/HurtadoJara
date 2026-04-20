@@ -1,0 +1,251 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  height: 64px;
+  transition: all 0.4s ease;
+  background: linear-gradient(90deg,
+    #060400 0%,
+    #0f0b03 20%,
+    #181100 40%,
+    #1e1600 50%,
+    #181100 60%,
+    #0f0b03 80%,
+    #060400 100%
+  );
+}
+
+.navbar--scrolled {
+  height: 56px;
+  background: linear-gradient(90deg,
+    rgba(4,3,0,0.97) 0%,
+    rgba(12,9,1,0.97) 30%,
+    rgba(18,13,2,0.97) 50%,
+    rgba(12,9,1,0.97) 70%,
+    rgba(4,3,0,0.97) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 60px rgba(229,179,33,0.08);
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  gap: 2rem;
+}
+
+/* ─── LOGO ─── */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.navbar__logo-rune {
+  font-size: 1rem;
+  color: #FEDB2D;
+  filter: drop-shadow(0 0 6px rgba(254,219,45,0.6));
+  animation: runeFloat 3s ease-in-out infinite;
+}
+
+.navbar__logo-text {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #F4C26C;
+  text-shadow: 0 0 20px rgba(244,194,108,0.3);
+}
+
+@keyframes runeFloat {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(254,219,45,0.6)); }
+  50%       { filter: drop-shadow(0 0 12px rgba(254,219,45,0.9)); }
+}
+
+/* ─── NAV LINKS ─── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__sep {
+  width: 1px;
+  height: 18px;
+  background: linear-gradient(180deg, transparent, rgba(184,134,11,0.4), transparent);
+  margin: 0 0.5rem;
+}
+
+.navbar__link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #a08040;
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar__link:hover {
+  color: #F4C26C;
+}
+
+.navbar__link--active {
+  color: #FEDB2D;
+  text-shadow: 0 0 15px rgba(254,219,45,0.4);
+}
+
+.navbar__link-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FEDB2D, transparent);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar__link--active .navbar__link-underline,
+.navbar__link:hover .navbar__link-underline {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ─── CTA BUTTON ─── */
+.navbar__cta {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #E5B321;
+  border: 1px solid rgba(229,179,33,0.35);
+  background: rgba(254,219,45,0.04);
+  padding: 0.5rem 1.4rem;
+  cursor: none;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar__cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(254,219,45,0.06), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.navbar__cta:hover::after { transform: translateX(100%); }
+.navbar__cta:hover {
+  border-color: #FEDB2D;
+  color: #FEDB2D;
+  box-shadow: 0 0 20px rgba(254,219,45,0.15), inset 0 0 15px rgba(254,219,45,0.04);
+}
+
+/* ─── BOTTOM LINE ─── */
+.navbar__bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(184,134,11,0.2) 10%,
+    #E5B321 30%,
+    #FEDB2D 50%,
+    #E5B321 70%,
+    rgba(184,134,11,0.2) 90%,
+    transparent 100%
+  );
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .navbar__inner { padding: 0 1.5rem; }
+  .navbar__links { display: none; }
+}
+
+/* ── Navbar actions group ── */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ── Oracle button in Navbar ── */
+.navbar__oracle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-serif);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  border: 1px solid rgba(254,219,45,0.35);
+  background: rgba(254,219,45,0.05);
+  padding: 0.5rem 0.9rem;
+  cursor: none;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar__oracle-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(254,219,45,0.08);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.navbar__oracle-btn:hover::before { opacity: 1; }
+.navbar__oracle-btn:hover {
+  border-color: rgba(254,219,45,0.65);
+  box-shadow: 0 0 16px rgba(254,219,45,0.2);
+}
+
+.navbar__oracle-rune {
+  font-size: 0.75rem;
+  filter: drop-shadow(0 0 4px rgba(254,219,45,0.6));
+  animation: oracle-rune-spin 8s linear infinite;
+}
+
+@keyframes oracle-rune-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.navbar__oracle-label {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .navbar__oracle-label { display: none; }
+  .navbar__oracle-btn { padding: 0.5rem; }
+}

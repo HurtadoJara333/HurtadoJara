@@ -1,0 +1,322 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ── Full-bleed photo background ── */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  /* no overlay here — let the image breathe */
+  image-rendering: high-quality;
+}
+
+/* ── Gradient only on left to protect text — right side stays untouched ── */
+.hero__gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(0,0,0,0.88) 0%,
+      rgba(0,0,0,0.72) 30%,
+      rgba(0,0,0,0.22) 55%,
+      rgba(0,0,0,0.0)  72%
+    );
+  pointer-events: none;
+}
+
+/* ── Three.js canvas container ── */
+.hero__three {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ── Content ── */
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: left;
+  padding: 0 0 0 clamp(2rem, 7vw, 8rem);
+  max-width: 680px;
+}
+
+.hero__eyebrow {
+  position: static;
+  flex-wrap: nowrap;
+  display: flex;
+  margin-top: 1rem;
+  left: 0;
+  width: fit-content;
+  padding: 0.3rem 0.8rem;
+  backdrop-filter: blur(4px);
+}
+
+.hero__eyebrow-text {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 5px;
+  color: #c9a84c;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 1s 0.2s ease forwards;
+}
+
+.hero__name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.hero__name-line {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 1.0;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.85), 0 0 40px rgba(244,194,108,0.2);
+  opacity: 0;
+  animation: fadeInUp 1s 0.35s ease forwards;
+}
+
+.hero__name-line--accent {
+  color: #FEDB2D;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.9),
+    0 0 50px rgba(254,219,45,0.55),
+    0 0 100px rgba(237,138,9,0.28);
+  animation-delay: 0.45s;
+}
+
+.hero__role {
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 4px;
+  color: #F4C26C;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  opacity: 0;
+  animation: fadeInUp 1s 0.6s ease forwards;
+}
+
+.hero__ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 1s 0.7s ease forwards;
+}
+
+.hero__ornament-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(229,179,33,0.85), transparent);
+}
+
+.hero__ornament-rune {
+  color: #E5B321;
+  font-size: 0.95rem;
+  filter: drop-shadow(0 0 8px rgba(229,179,33,0.7));
+}
+
+.hero__tagline {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.18rem;
+  font-style: italic;
+  color: #c9a84c;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+  max-width: 400px;
+  opacity: 0;
+  animation: fadeInUp 1s 0.8s ease forwards;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 1s 0.95s ease forwards;
+}
+
+.hero__btn-arrow {
+  display: inline-block;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* ── Scroll hint ── */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: clamp(2rem, 7vw, 8rem);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 1s 1.5s ease forwards;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(180deg, rgba(229,179,33,0.8), transparent);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+.hero__scroll-text {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 3px;
+  color: #a08040;
+  text-transform: uppercase;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(0.8); }
+  50%       { opacity: 1;   transform: scaleY(1); }
+}
+
+/* ── Tech tags ── */
+.hero__tags {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.hero__tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  border: 1px solid rgba(229,179,33,0.35);
+  padding: 0.3rem 0.8rem;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(5px); }
+}
+
+@media (max-width: 768px) {
+  .hero__content { padding-left: 1.5rem; max-width: 90vw; }
+  .hero__tags    { display: none; }
+  .hero__actions { flex-direction: column; gap: 0.8rem; }
+}
+
+/* ── Mute button — top-right corner ── */
+.hero__eyebrow-mute {
+  position: absolute;
+  top: -0.5rem;
+  right: -2rem;
+  z-index: 100;
+  background: rgba(0,0,0,0.50);
+  border: 1px solid rgba(229,179,33,0.30);
+  color: #c9a84c;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+  animation: fadeIn 0.8s 1.8s ease forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.hero__eyebrow-mute:hover {
+  border-color: rgba(254,219,45,0.55);
+  background: rgba(0,0,0,0.65);
+  transform: scale(1.08);
+}
+/* ── Oracle button in Hero ── */
+.btn-oracle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  border: 1px solid rgba(254,219,45,0.5);
+  padding: 0.9rem 2rem;
+  background: rgba(254,219,45,0.06);
+  cursor: none;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 16px rgba(254,219,45,0.5);
+  box-shadow: 0 0 20px rgba(254,219,45,0.08), inset 0 0 20px rgba(254,219,45,0.04);
+  animation: oracle-btn-pulse 3s ease-in-out infinite;
+}
+
+@keyframes oracle-btn-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(254,219,45,0.08), inset 0 0 20px rgba(254,219,45,0.04); }
+  50%       { box-shadow: 0 0 32px rgba(254,219,45,0.2), inset 0 0 20px rgba(254,219,45,0.08); }
+}
+
+.btn-oracle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(254,219,45,0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-oracle:hover::before { transform: translateX(100%); }
+.btn-oracle:hover {
+  border-color: var(--gold-bright);
+  background: rgba(254,219,45,0.12);
+  box-shadow: 0 0 40px rgba(254,219,45,0.3), 0 0 80px rgba(237,138,9,0.15);
+}
+
+.btn-oracle__rune {
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 6px rgba(254,219,45,0.8));
+}

@@ -1,0 +1,35 @@
+.footer {
+  padding: 3rem 0 2rem;
+  background: var(--bg-void);
+  text-align: center;
+}
+
+.footer__line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(229,179,33,0.35) 50%, transparent);
+  margin-bottom: 2.5rem;
+}
+
+.footer__inner { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+
+.footer__rune {
+  font-size: 1.1rem;
+  color: #7a6030;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px rgba(122,96,48,0.4));
+}
+
+.footer__copy {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6a5220;
+}
+
+.footer__sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #4a3a12;
+}
