@@ -17,58 +17,58 @@ const experiences: ExperienceItem[] = [
     id: 1,
     period: 'Mar 2024 – May 2025',
     role: 'Web UI Developer',
-    company: 'Globant · Cliente: GORE',
+    company: 'Globant · Client: GORE',
     location: 'Medellín, Colombia',
-    description: 'Desarrollo de componentes UI reutilizables en Vanilla JavaScript, SASS y Twig integrados en Drupal CMS. Integración de herramientas de IA, agentes y automatización en sistemas web modernos, aprovechando LLMs para mejorar capacidades de producto y productividad.',
-    achievements: [
-      'Componentes reutilizables en Vanilla JS + SASS + Twig para Drupal',
-      'Bibliotecas de componentes con Storybook para documentación de design system',
-      'Integración de agentes IA y flujos de automatización con LLMs',
-      'Traducción de mockups Figma a componentes accesibles pixel-perfect',
-    ],
+  description: 'Development of reusable UI components in Vanilla JavaScript, SASS, and Twig integrated into Drupal CMS. Integration of AI tools, agents, and automation in modern web systems, leveraging LLMs to enhance product capabilities and productivity.',
+  achievements: [
+    'Reusable components in Vanilla JS + SASS + Twig for Drupal',
+    'Component libraries with Storybook for design system documentation',
+    'Integration of AI agents and automation workflows with LLMs',
+    'Translation of Figma mockups into pixel-perfect accessible components',
+  ],
     type: 'work',
   },
   {
     id: 2,
     period: 'Feb 2022 – Nov 2022',
     role: 'Web UI Developer',
-    company: 'Globant · Cliente: Rockwell Automation (RAIDER)',
-    location: 'Medellín, Colombia',
-    description: 'Contribución a un IDE basado en navegador en Angular para programar microcontroladores industriales usados en líneas de ensamblaje. Aprendizaje autónomo de Angular con entregas a nivel de producción.',
-    achievements: [
-      'IDE browser-based en Angular para programación de microcontroladores industriales',
-      'Aprendizaje autónomo de Angular con entregas a nivel de producción sin supervisión senior',
-      'Resolución de bugs críticos en bug-bash sessions mejorando estabilidad de la plataforma',
-      'Exposición práctica a contextos IoT y sistemas embebidos',
-    ],
+  company: 'Globant · Client: Rockwell Automation (RAIDER)',
+  location: 'Medellín, Colombia',
+  description: 'Contributed to a browser-based IDE in Angular for programming industrial microcontrollers used in assembly lines. Self-taught Angular with production-level deliveries.',
+  achievements: [
+    'Browser-based IDE in Angular for industrial microcontroller programming',
+    'Self-taught Angular with production-level deliveries and no senior supervision',
+    'Critical bug resolution in bug-bash sessions improving platform stability',
+    'Hands-on exposure to IoT contexts and embedded systems',
+  ],
     type: 'work',
   },
   {
     id: 3,
     period: 'May 2023 – Dic 2023',
     role: 'Web UI Developer',
-    company: 'Globant · Clientes: Ernst & Young / Maryville Education',
-    location: 'Medellín, Colombia',
-    description: 'Implementación de componentes UI bajo estrictas guías UX para garantizar consistencia de marca en E&Y. Migración del sitio de Maryville Education a nuevo dominio con WordPress Gutenberg.',
-    achievements: [
-      'Componentes UI con consistencia de marca para Ernst & Young',
-      'Migración completa del sitio Maryville Education preservando fidelidad visual',
-      'Bloques personalizados con WordPress Gutenberg',
-    ],
+  company: 'Globant · Clients: Ernst & Young / Maryville Education',
+  location: 'Medellín, Colombia',
+  description: 'Implementation of UI components under strict UX guidelines to ensure brand consistency for E&Y. Migration of the Maryville Education site to a new domain with WordPress Gutenberg.',
+  achievements: [
+    'UI components with brand consistency for Ernst & Young',
+    'Complete migration of Maryville Education site preserving visual fidelity',
+    'Custom blocks with WordPress Gutenberg',
+  ],
     type: 'work',
   },
   {
     id: 4,
     period: 'Oct 2021 – Feb 2022',
     role: 'Web UI Developer',
-    company: 'Globant · Cliente: Rain (Trading Platform)',
-    location: 'Medellín, Colombia',
-    description: 'Componentes React + TypeScript para una plataforma de trading en tiempo real. Historias de componentes con Storybook y mejoras UX continuas.',
-    achievements: [
-      'Componentes responsivos en React + TypeScript para trading en tiempo real',
-      'Historias de componentes con Storybook',
-      'Mejoras UX iterativas a través de bug fixes',
-    ],
+  company: 'Globant · Client: Rain (Trading Platform)',
+  location: 'Medellín, Colombia',
+  description: 'React + TypeScript components for a real-time trading platform. Component stories with Storybook and continuous UX improvements.',
+  achievements: [
+    'Responsive components in React + TypeScript for real-time trading',
+    'Component stories with Storybook',
+    'Iterative UX improvements through bug fixes',
+  ],
     type: 'work',
   },
   {
@@ -77,12 +77,12 @@ const experiences: ExperienceItem[] = [
     role: 'Frontend Developer',
     company: 'TeamClass',
     location: 'Medellín, Colombia',
-    description: 'Lideré el desarrollo frontend de una plataforma de creación de eventos educativos, coordinando el equipo y definiendo la arquitectura de la aplicación.',
-    achievements: [
-      'Liderazgo del equipo frontend y definición de arquitectura',
-      'UIs interactivas con React.js con foco en UI/UX best practices',
-      'Integración de Google Calendar via OAuth 2.0',
-    ],
+  description: 'Led frontend development for an educational event creation platform, coordinating the team and defining the application architecture.',
+  achievements: [
+    'Frontend team leadership and architecture definition',
+    'Interactive UIs with React.js focused on UI/UX best practices',
+    'Google Calendar integration via OAuth 2.0',
+  ],
     type: 'work',
   },
   {
@@ -91,8 +91,8 @@ const experiences: ExperienceItem[] = [
     role: 'Fullstack Developer Program',
     company: 'Holberton School',
     location: 'Medellín, Colombia',
-    description: 'Programa intensivo de desarrollo fullstack con enfoque en fundamentos sólidos de computación, algoritmos y desarrollo web moderno.',
-    achievements: ['Graduado del programa Fullstack Developer', 'Fundamentos sólidos en C, Python, JavaScript y SQL'],
+  description: 'Intensive fullstack development program with a focus on solid computing fundamentals, algorithms, and modern web development.',
+  achievements: ['Graduated from the Fullstack Developer Program', 'Solid fundamentals in C, Python, JavaScript, and SQL'],
     type: 'education',
   },
 ];
@@ -109,7 +109,7 @@ const ExperienceCard: React.FC<{ item: ExperienceItem; index: number; isLast: bo
         <button className="exp-item__header" onClick={() => setOpen(o => !o)}>
           <div className="exp-item__meta">
             <span className="exp-item__period">{item.period}</span>
-            <span className="exp-item__type-badge">{item.type === 'education' ? '✦ Formación' : '✦ Trabajo'}</span>
+            <span className="exp-item__type-badge">{item.type === 'education' ? '✦ Education' : '✦ Work'}</span>
           </div>
           <h3 className="exp-item__role">{item.role}</h3>
           <div className="exp-item__company-row">
@@ -145,9 +145,9 @@ const Experience: React.FC = () => {
       <div className="experience__divider" />
       <div className="experience__inner">
         <div className="experience__header">
-          <span className="section-eyebrow">✦ El Camino Recorrido</span>
-          <h2 className="section-title">Experiencia</h2>
-          <p className="experience__subtitle">4+ años en Globant construyendo para Fortune 500. Cada proyecto, una batalla ganada.</p>
+      <span className="section-eyebrow">✦ The Path Traveled</span>
+      <h2 className="section-title">Experience</h2>
+      <p className="experience__subtitle">4+ years at Globant building for Fortune 500. Every project, a battle won.</p>
         </div>
         <div className="experience__timeline">
           {experiences.map((item, i) => (

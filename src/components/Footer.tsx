@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
       <div className="footer__line" />
       <div className="footer__inner">
         <div className="footer__rune">⚜</div>
-        <p className="footer__copy">© {year} Andrés Hurtado Jaramillo · Forjado con fuego y TypeScript</p>
-        <p className="footer__sub">Que la gracia dorada te guíe · Medellín, Colombia</p>
+      <p className="footer__copy">© {year} Andrés Hurtado Jaramillo · Forged with fire and TypeScript</p>
+      <p className="footer__sub">May the golden grace guide you · Medellín, Colombia</p>
       </div>
     </footer>
   );

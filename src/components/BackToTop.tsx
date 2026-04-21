@@ -14,7 +14,7 @@ const BackToTop: React.FC = () => {
     <button
       className={`btt ${visible ? 'btt--visible' : ''}`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      aria-label="Volver arriba"
+      aria-label="Back to top"
     >
       <span className="btt__rune">⚜</span>
       <span className="btt__arrow">↑</span>

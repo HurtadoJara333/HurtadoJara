@@ -438,12 +438,12 @@ const Hero: React.FC<HeroProps> = ({ onOpenOracle }) => {
           <button
             className="hero__eyebrow-mute"
             onClick={toggleMute}
-            aria-label={muted ? "Activar sonido" : "Silenciar"}
+            aria-label={muted ? "Unmute" : "Mute"}
           >
             {muted ? "🔇" : "🔊"}
           </button>
           <p className="hero__eyebrow-text">
-            Descansa junto las llamas, artesano
+            Rest by the flames, artisan
           </p>
         </div>
         <h1 className="hero__name">
@@ -459,21 +459,21 @@ const Hero: React.FC<HeroProps> = ({ onOpenOracle }) => {
           <span className="hero__ornament-line" />
         </div>
         <p className="hero__tagline">
-          Forjando experiencias digitales con precisión y fuego.
+          Forging digital experiences with precision and fire.
         </p>
         <div className="hero__actions">
-          <button className="btn-primary" onClick={() => scrollTo("proyectos")}>
-            Ver Proyectos <span className="hero__btn-arrow">↓</span>
+          <button className="btn-primary" onClick={() => scrollTo("projects")}>
+            View Projects <span className="hero__btn-arrow">↓</span>
           </button>
           <button className="btn-oracle" onClick={onOpenOracle}>
             <span className="btn-oracle__rune">⚜</span>
-            Consultar Oráculo
+            Consult the Oracle
           </button>
         </div>
       </div>
       <div className="hero__scroll-hint">
         <div className="hero__scroll-line" />
-        <span className="hero__scroll-text">Descender</span>
+        <span className="hero__scroll-text">Descend</span>
       </div>
       <div className="hero__tags">
         {["React", "TypeScript", "Next.js", "Node.js"].map((t, i) => (

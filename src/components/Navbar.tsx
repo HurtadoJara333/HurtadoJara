@@ -7,11 +7,11 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { id: 'inicio',      label: 'Inicio' },
-  { id: 'proyectos',   label: 'Proyectos' },
-  { id: 'experiencia', label: 'Experiencia' },
-  { id: 'sobre-mi',    label: 'Sobre mí' },
-  { id: 'contacto',    label: 'Contacto' },
+  { id: 'home', label: 'Home' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'about', label: 'About' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 const NAVBAR_HEIGHT = 64;
@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, scrolled }) => {
 const handleClick = (id: string) => {
   const el = document.getElementById(id);
   if (!el) return;
-  if (id === 'inicio') {
+  if (id === 'home') {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return;
   }
@@ -31,7 +31,7 @@ const handleClick = (id: string) => {
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
-        <button className="navbar__logo" onClick={() => handleClick('inicio')}>
+        <button className="navbar__logo" onClick={() => handleClick('home')}>
           <span className="navbar__logo-rune">⚜</span>
           <span className="navbar__logo-text">HurtadoJara</span>
         </button>
@@ -54,8 +54,8 @@ const handleClick = (id: string) => {
         </ul>
 
         <div className="navbar__actions">
-          <button className="navbar__cta" onClick={() => handleClick('contacto')}>
-            Contactar
+      <button className="navbar__cta" onClick={() => handleClick('contact')}>
+        Contact
           </button>
         </div>
       </div>

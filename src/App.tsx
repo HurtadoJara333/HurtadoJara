@@ -15,7 +15,7 @@ import './styles/global.css';
 
 const App: React.FC = () => {
   const [loading, setLoading]             = useState(true);
-  const [activeSection, setActiveSection] = useState('inicio');
+  const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled]           = useState(false);
   const [oracleOpen, setOracleOpen]       = useState(false);
 
@@ -28,7 +28,7 @@ const App: React.FC = () => {
     if (loading) return;
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      const ids = ['inicio', 'proyectos', 'experiencia', 'sobre-mi', 'contacto'];
+      const ids = ['home', 'projects', 'experience', 'about', 'contact'];
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el) {
@@ -52,11 +52,11 @@ const App: React.FC = () => {
         <ScrollProgress />
         <Navbar activeSection={activeSection} scrolled={scrolled} />
         <main>
-          <section id="inicio">      <Hero onOpenOracle={toggleOracle} />  </section>
-          <section id="proyectos">   <Projects />   </section>
-          <section id="experiencia"> <Experience /> </section>
-          <section id="sobre-mi">    <About />      </section>
-          <section id="contacto">    <Contact />    </section>
+        <section id="home"> <Hero onOpenOracle={toggleOracle} /> </section>
+        <section id="projects"> <Projects /> </section>
+        <section id="experience"> <Experience /> </section>
+        <section id="about"> <About /> </section>
+        <section id="contact"> <Contact /> </section>
         </main>
         <Footer />
         <BackToTop />

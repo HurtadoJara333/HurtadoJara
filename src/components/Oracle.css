@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════
-   ORACLE — Bottom Tab Bar + Pergamino desplegable
+   ORACLE — Bottom Tab Bar + Expandable Panel
    ═══════════════════════════════════════════════════ */
 
-/* ── Overlay oscuro (solo visible cuando está abierto) ── */
+/* ── Dark overlay (only visible when open) ── */
 .oracle-overlay {
   position: fixed;
   inset: 0;
@@ -21,7 +21,7 @@
   pointer-events: auto;
 }
 
-/* ── Barra contenedora (siempre fija en el fondo) ── */
+/* ── Container bar (always fixed at bottom) ── */
 .oracle-bar {
   position: fixed;
   bottom: 0;
@@ -38,7 +38,7 @@
     0 -8px 32px rgba(237,138,9,0.12);
 }
 
-/* ── Línea dorada ornamental ── */
+/* ── Ornamental golden line ── */
 .oracle-bar__glow-line {
   height: 2px;
   background: linear-gradient(
@@ -55,7 +55,7 @@
   flex-shrink: 0;
 }
 
-/* ── Panel expandible ── */
+/* ── Expandable panel ── */
 .oracle-panel {
   overflow: hidden;
   max-height: 0;
@@ -126,7 +126,7 @@
   background: linear-gradient(90deg, transparent, rgba(229,179,33,0.2) 20%, rgba(254,219,45,0.4) 50%, rgba(229,179,33,0.2) 80%, transparent);
 }
 
-/* ── Cuerpo: mensajes + sidebar ── */
+/* ── Body: messages + sidebar ── */
 .oracle-body {
   flex: 1;
   display: flex;
@@ -153,7 +153,7 @@
   border-radius: 2px;
 }
 
-/* Sidebar sugerencias */
+/* Sidebar suggestions */
 .oracle-sidebar {
   width: 178px;
   flex-shrink: 0;
@@ -194,7 +194,7 @@
   background: rgba(229,179,33,0.05);
 }
 
-/* ── Mensajes ── */
+/* ── Messages ── */
 .oracle-msg {
   display: flex;
   gap: 0.6rem;
@@ -333,7 +333,7 @@
 .oracle-send:disabled { opacity: 0.22; }
 .oracle-send__rune { font-size: 1rem; font-family: var(--font-serif); }
 
-/* ── Tab trigger (siempre visible) ── */
+/* ── Tab trigger (always visible) ── */
 .oracle-bar__tab {
   display: flex;
   align-items: center;

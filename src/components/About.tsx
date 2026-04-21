@@ -9,9 +9,9 @@ const skills = [
 ];
 
 const stats = [
-  { value: '4+',  label: 'Años de experiencia' },
-  { value: '10+', label: 'Proyectos en producción' },
-  { value: '2',   label: 'Idiomas: ES / EN' },
+  { value: '4+', label: 'Years of experience' },
+  { value: '10+', label: 'Projects in production' },
+  { value: '2', label: 'Languages: ES / EN' },
 ];
 
 const About: React.FC = () => {
@@ -28,13 +28,13 @@ const About: React.FC = () => {
       <div className="about__divider" />
       <div className="about__inner">
         <div className="about__text-col">
-          <span className="section-eyebrow">✦ El Artesano</span>
-          <h2 className="section-title">Sobre mí</h2>
+        <span className="section-eyebrow">✦ The Artisan</span>
+        <h2 className="section-title">About me</h2>
           <div className="about__body">
-            <p>Soy un Web Developer de Medellín con más de 4 años construyendo interfaces de producción para clientes Fortune 500 en Globant — incluyendo Rockwell Automation y Ernst & Young.</p>
-            <p>Me especializo en React, TypeScript y Next.js, con experiencia sólida en Angular, Node.js y arquitecturas CMS como Drupal y WordPress. Trabajo bien solo o liderando equipos, con fuerte enfoque en <em>accesibilidad</em>, <em>performance</em> y <em>diseño pixel-perfect</em>.</p>
-            <p>Integro herramientas de IA, agentes y automatización en sistemas web modernos, aprovechando modelos de lenguaje para potenciar capacidades de producto y productividad del equipo.</p>
-            <p>Cuando no estoy codificando, aprendo nuevas tecnologías, juego videojuegos con lore profundo, o exploro diseño visual.</p>
+          <p>I am a Web Developer from Medellín with over 4 years building production-grade interfaces for Fortune 500 clients at Globant — including Rockwell Automation and Ernst & Young.</p>
+          <p>I specialize in React, TypeScript, and Next.js, with solid experience in Angular, Node.js, and CMS architectures like Drupal and WordPress. I work well independently or leading teams, with a strong focus on <em>accessibility</em>, <em>performance</em>, and <em>pixel-perfect design</em>.</p>
+          <p>I integrate AI tools, agents, and automation into modern web systems, leveraging language models to boost product capabilities and team productivity.</p>
+          <p>When I'm not coding, I learn new technologies, play video games with deep lore, or explore visual design.</p>
           </div>
           <div className="about__stats">
             {stats.map((s, i) => (
@@ -44,7 +44,7 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
-          <a href="/Andres_Hurtado_Resume_ATS.pdf" className="btn-primary about__cv-btn" download>Descargar CV ↓</a>
+          <a href="/Andres_Hurtado_Resume_ATS.pdf" className="btn-primary about__cv-btn" download>Download CV ↓</a>
         </div>
         <div className="about__skills-col">
           <div className="about__avatar">

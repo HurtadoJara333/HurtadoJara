@@ -34,32 +34,32 @@ const Contact: React.FC = () => {
       <div className="contact__divider" />
       <div className="contact__inner">
         <div className="contact__header">
-          <span className="section-eyebrow">✦ Alianza</span>
-          <h2 className="section-title">Contacto</h2>
-          <p className="contact__subtitle">¿Tienes un proyecto en mente? Hablemos.</p>
+      <span className="section-eyebrow">✦ Alliance</span>
+      <h2 className="section-title">Contact</h2>
+      <p className="contact__subtitle">Have a project in mind? Let's talk.</p>
         </div>
         <div className="contact__layout">
           <div className="contact__info">
             <div className="contact__lore">
               <div className="contact__lore-ornament">⚜</div>
-              <p>"Si buscas a alguien que construya con precisión, autonomía y fuego — aquí estoy."</p>
+              <p>"If you seek someone who builds with precision, autonomy, and fire — here I am."</p>
             </div>
             <div className="contact__details">
               <div className="contact__detail">
-                <span className="contact__detail-label">Disponibilidad</span>
+                <span className="contact__detail-label">Availability</span>
                 <span className="contact__detail-value"><span className="contact__dot" />Open to work</span>
               </div>
               <div className="contact__detail">
-                <span className="contact__detail-label">Ubicación</span>
+                <span className="contact__detail-label">Location</span>
                 <span className="contact__detail-value">Medellín, Colombia 🔥</span>
               </div>
               <div className="contact__detail">
-                <span className="contact__detail-label">Teléfono</span>
+                <span className="contact__detail-label">Phone</span>
                 <span className="contact__detail-value">+57 300 301 4440</span>
               </div>
               <div className="contact__detail">
-                <span className="contact__detail-label">Idiomas</span>
-                <span className="contact__detail-value">Español (nativo) · English (B2)</span>
+          <span className="contact__detail-label">Languages</span>
+          <span className="contact__detail-value">Spanish (native) · English (B2)</span>
               </div>
             </div>
             <div className="contact__social">
@@ -76,25 +76,25 @@ const Contact: React.FC = () => {
             {sent ? (
               <div className="contact__success">
                 <div className="contact__success-rune">⚜</div>
-                <h3>Mensaje enviado</h3>
-                <p>Gracias por escribir, Inluminado. Te respondo pronto.</p>
-                <button className="btn-ghost" onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }); }}>Enviar otro</button>
+        <h3>Message sent</h3>
+        <p>Thank you for reaching out, Tarnished. I'll respond soon.</p>
+        <button className="btn-ghost" onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }); }}>Send another</button>
               </div>
             ) : (
               <div className="contact__form">
                 {(['name','email'] as const).map(field => (
                   <div key={field} className={`contact__field ${focused===field?'contact__field--focused':''} ${form[field]?'contact__field--filled':''}`}>
-                    <label className="contact__label">{field === 'name' ? 'Nombre' : 'Email'}</label>
+                    <label className="contact__label">{field === 'name' ? 'Name' : 'Email'}</label>
                     <input type={field==='email'?'email':'text'} name={field} className="contact__input" value={form[field]} onChange={handleChange} onFocus={()=>setFocused(field)} onBlur={()=>setFocused(null)} />
                     <div className="contact__field-line" />
                   </div>
                 ))}
                 <div className={`contact__field contact__field--textarea ${focused==='message'?'contact__field--focused':''} ${form.message?'contact__field--filled':''}`}>
-                  <label className="contact__label">Mensaje</label>
+                  <label className="contact__label">Message</label>
                   <textarea name="message" className="contact__input contact__textarea" rows={5} value={form.message} onChange={handleChange} onFocus={()=>setFocused('message')} onBlur={()=>setFocused(null)} />
                   <div className="contact__field-line" />
                 </div>
-                <button className="btn-primary contact__submit" onClick={handleSubmit}>Enviar mensaje →</button>
+                <button className="btn-primary contact__submit" onClick={handleSubmit}>Send message →</button>
               </div>
             )}
           </div>

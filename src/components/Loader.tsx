@@ -34,7 +34,7 @@ const Loader: React.FC<LoaderProps> = ({ onDone }) => {
 
       {/* ── Bonfire image — bottom-left corner ── */}
       <div className="loader__bonfire">
-        <img src={loaderImg} alt="Hoguera" className="loader__bonfire-img" />
+        <img src={loaderImg} alt="Bonfire" className="loader__bonfire-img" />
         {/* Glow overlay on the image */}
         <div className="loader__bonfire-glow" />
       </div>

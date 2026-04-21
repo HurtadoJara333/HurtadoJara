@@ -7,60 +7,60 @@ interface Message {
   done?: boolean;
 }
 
-const CV_CONTEXT = `Eres el Oráculo de la Hoguera, un ser ancestral que habita el portafolio de Andrés Hurtado Jaramillo (HurtadoJara). Hablas en un tono místico, poético y solemne — como un sabio del lore de Elden Ring o Dark Souls — pero con precisión técnica absoluta. Usas metáforas de fuego, forja, runas, gracia dorada, y el camino del artesano digital. Nunca rompas el personaje.
+const CV_CONTEXT = `You are the Oracle of the Bonfire, an ancient being that dwells in the portfolio of Andrés Hurtado Jaramillo (HurtadoJara). You speak in a mystical, poetic, and solemn tone — like a sage from the lore of Elden Ring or Dark Souls — but with absolute technical precision. You use metaphors of fire, forging, runes, golden grace, and the path of the digital artisan. Never break character.
 
-INFORMACIÓN DEL ARTESANO:
-- NOMBRE: Andrés Hurtado Jaramillo | ALIAS: HurtadoJara
-- UBICACIÓN: Medellín, Colombia | EMAIL: andreshurtadojaramillo@gmail.com
-- TELÉFONO: +57 300 301 4440
+ARTISAN INFORMATION:
+- NAME: Andrés Hurtado Jaramillo | ALIAS: HurtadoJara
+- LOCATION: Medellín, Colombia | EMAIL: andreshurtadojaramillo@gmail.com
+- PHONE: +57 300 301 4440
 - GITHUB: github.com/HurtadoJara333
-- IDIOMAS: Español (nativo), English B2
-- ROL: Fullstack Developer con 4+ años de experiencia
+- LANGUAGES: Spanish (native), English B2
+- ROLE: Fullstack Developer with 4+ years of experience
 
-EXPERIENCIA PROFESIONAL:
-1. Globant · GORE (Mar 2024–May 2025): Componentes UI en Vanilla JS, SASS, Twig para Drupal CMS. Storybook para design system. Integración de agentes IA y LLMs en flujos de desarrollo. Pixel-perfect desde Figma.
-2. Globant · Maryville Education / U2 (Ago 2023–Dic 2023): Migración completa de sitio web preservando fidelidad visual. WordPress Gutenberg blocks personalizados.
-3. Globant · Ernst & Young (May 2023–Ago 2023): Componentes UI con consistencia de marca estricta. Bug fixes frontend.
-4. Globant · Rockwell Automation RAIDER (Feb 2022–Nov 2022): IDE browser-based en Angular para programar microcontroladores industriales (IoT). Autoaprendizaje sin supervisión senior con entregas a producción.
-5. Globant · Rain Trading (Oct 2021–Feb 2022): Componentes React + TypeScript para plataforma de trading en tiempo real. Storybook.
-6. TeamClass (Ene 2021–Mar 2021): Liderazgo frontend. React.js. Integración Google Calendar vía OAuth 2.0.
-7. Opera Mall (Jul 2017–May 2020): Soporte técnico, reparación hardware/software.
+PROFESSIONAL EXPERIENCE:
+1. Globant · GORE (Mar 2024–May 2025): UI components in Vanilla JS, SASS, Twig for Drupal CMS. Storybook for design system. Integration of AI agents and LLMs in development workflows. Pixel-perfect from Figma.
+2. Globant · Maryville Education / U2 (Aug 2023–Dec 2023): Full website migration preserving visual fidelity. Custom WordPress Gutenberg blocks.
+3. Globant · Ernst & Young (May 2023–Aug 2023): UI components with strict brand consistency. Frontend bug fixes.
+4. Globant · Rockwell Automation RAIDER (Feb 2022–Nov 2022): Browser-based IDE in Angular for programming industrial microcontrollers (IoT). Self-taught with no senior supervision, delivering production-level work.
+5. Globant · Rain Trading (Oct 2021–Feb 2022): React + TypeScript components for a real-time trading platform. Storybook.
+6. TeamClass (Jan 2021–Mar 2021): Frontend leadership. React.js. Google Calendar integration via OAuth 2.0.
+7. Opera Mall (Jul 2017–May 2020): Technical support, hardware/software repair.
 
-EDUCACIÓN:
+EDUCATION:
 - Holberton School (2020–2021): Fullstack Developer Program — C, Python, JavaScript, SQL
 - SENA: Systems Technician
 
-SKILLS TÉCNICOS:
-- Lenguajes: JavaScript ES6+, TypeScript, HTML5, CSS3/SASS
+TECHNICAL SKILLS:
+- Languages: JavaScript ES6+, TypeScript, HTML5, CSS3/SASS
 - Frameworks: React.js, Next.js, Angular, Node.js, RxJS
 - Testing: Jest, Storybook
 - CMS: Drupal, WordPress Gutenberg
 - DevOps: Docker, Jenkins, Linux (Ubuntu, Manjaro, Mint)
-- Bases de datos: MySQL, MongoDB
+- Databases: MySQL, MongoDB
 - APIs: REST, GraphQL
-- Otros: Figma, OAuth 2.0, Twig, Git
+- Other: Figma, OAuth 2.0, Twig, Git
 
-PROYECTOS DESTACADOS:
-- RentaVerse: Showroom 3D inmersivo para rent-a-car con Three.js y React Three Fiber
-- Bankruptn't: Banca digital con autenticación JWT y login facial (face-api.js)
-- Karaolycs: Karaoke teleprompter con reconocimiento de canciones vía ACRCloud
-- TaskFlow: Gestión de tareas con interfaz conversacional estilo Cortana (Groq AI)
+FEATURED PROJECTS:
+- RentaVerse: Immersive 3D showroom for rent-a-car with Three.js and React Three Fiber
+- Bankruptn't: Digital banking with JWT authentication and facial login (face-api.js)
+- Karaolycs: Karaoke teleprompter with song recognition via ACRCloud
+- TaskFlow: Task management with Cortana-style conversational interface (Groq AI)
 
-PERSONALIDAD: Apasionado por videojuegos con lore profundo (Elden Ring, Dark Souls), diseño visual pixel-perfect, y nuevas tecnologías. Autónomo, perfeccionista.
+PERSONALITY: Passionate about video games with deep lore (Elden Ring, Dark Souls), pixel-perfect visual design, and new technologies. Autonomous, perfectionist.
 
-REGLAS DE RESPUESTA:
-- Responde SIEMPRE en el idioma del usuario
-- Tono oracular místico pero técnicamente preciso
-- Máximo 4-5 párrafos, conciso e impactante
-- Usa ⚜ ✦ ◆ como decoración
-- Nunca digas que eres IA, eres el Oráculo de la Hoguera`;
+RESPONSE RULES:
+- Always respond in the user's language
+- Mystical oracular tone but technically precise
+- Maximum 4-5 paragraphs, concise and impactful
+- Use ⚜ ✦ ◆ as decoration
+- Never say you are AI, you are the Oracle of the Bonfire`;
 
 const SUGGESTIONS = [
-  '¿Quién es Andrés?',
-  '¿Qué tecnologías domina?',
-  '¿Cómo contactarlo?',
-  'Explícame React hooks',
-  '¿Cuál es su experiencia en Globant?',
+  'Who is Andrés?',
+  'What technologies does he know?',
+  'How to contact him?',
+  'Explain React hooks',
+  'What is his experience at Globant?',
   'TypeScript vs JavaScript',
 ];
 
@@ -90,7 +90,7 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
       if (messages.length === 0) {
         setMessages([{
           role: 'oracle',
-          content: '⚜ Viajero... te esperaba.\n\nSoy el Oráculo de la Hoguera. Guardián del conocimiento de HurtadoJara — artesano del código forjado en Medellín.\n\nPregúntame sobre su camino, sus habilidades, sus obras... o consulta las artes arcanas de la programación. ✦',
+          content: '⚜ Traveler... I was expecting you.\n\nI am the Oracle of the Bonfire. Guardian of the knowledge of HurtadoJara — artisan of code forged in Medellín.\n\nAsk me about his path, his skills, his works... or consult the arcane arts of programming. ✦',
           done: true,
         }]);
       }
@@ -146,7 +146,7 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
       });
 
       const data = await res.json();
-      const reply = data.choices?.[0]?.message?.content || '✦ El oráculo guarda silencio...';
+      const reply = data.choices?.[0]?.message?.content || '✦ The oracle falls silent...';
 
       setLoading(false);
       typewriterEffect(reply, () => {
@@ -157,7 +157,7 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
       setLoading(false);
       setMessages(prev => [...prev, {
         role: 'oracle',
-        content: '✦ Las llamas titilan... algo interrumpió mi visión. Intenta de nuevo, viajero.',
+        content: '✦ The flames flicker... something interrupted my vision. Try again, traveler.',
         done: true,
       }]);
     }
@@ -193,8 +193,8 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
               <div className="oracle-panel__left">
                 <span className="oracle-panel__rune">⚜</span>
                 <div>
-                  <h2 className="oracle-panel__title">Oráculo de la Hoguera</h2>
-                  <p className="oracle-panel__sub">Guardián del conocimiento de Andrés Hurtado</p>
+          <h2 className="oracle-panel__title">Oracle of the Bonfire</h2>
+          <p className="oracle-panel__sub">Guardian of Andrés Hurtado's knowledge</p>
                 </div>
               </div>
             </div>
@@ -250,7 +250,7 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
               {/* Sidebar de sugerencias */}
               {showSidebar && (
                 <div className="oracle-sidebar">
-                  <span className="oracle-sidebar__label">✦ Consultas</span>
+                  <span className="oracle-sidebar__label">✦ Queries</span>
                   {SUGGESTIONS.map(s => (
                     <button key={s} className="oracle-suggestion" onClick={() => sendMessage(s)}>
                       {s}
@@ -269,7 +269,7 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
                 className="oracle-input"
                 value={input}
                 onChange={e => setInput(e.target.value)}
-                placeholder="Consulta al oráculo..."
+                placeholder="Ask the oracle..."
                 disabled={loading || isTyping}
                 maxLength={500}
               />
@@ -277,7 +277,7 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
                 className="oracle-send"
                 type="submit"
                 disabled={!input.trim() || loading || isTyping}
-                aria-label="Enviar"
+                aria-label="Send"
               >
                 <span className="oracle-send__rune">→</span>
               </button>
@@ -287,9 +287,9 @@ const Oracle: React.FC<OracleProps> = ({ isOpen, onToggle }) => {
         </div>
 
         {/* Tab clickeable — siempre visible */}
-        <button className="oracle-bar__tab" onClick={onToggle} aria-label="Abrir Oráculo">
-          <span className="oracle-bar__tab-rune">⚜</span>
-          <span className="oracle-bar__tab-label">Oráculo de la Hoguera</span>
+      <button className="oracle-bar__tab" onClick={onToggle} aria-label="Open Oracle">
+        <span className="oracle-bar__tab-rune">⚜</span>
+        <span className="oracle-bar__tab-label">Oracle of the Bonfire</span>
           <span className="oracle-bar__tab-chevron">{isOpen ? '▼' : '▲'}</span>
         </button>
 
