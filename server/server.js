@@ -20,6 +20,7 @@ app.post('/api/oracle', async (req, res) => {
   const apiKey = process.env.NVIDIA_API_KEY;
 
   if (!apiKey) {
+    console.error('Missing NVIDIA_API_KEY env var');
     return res.status(500).json({ error: 'API key not configured' });
   }
 
@@ -31,25 +32,27 @@ app.post('/api/oracle', async (req, res) => {
         'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'nvidia/z-ai/glm5',
-        max_tokens: 800,
-        temperature: 0.7,
-        top_p: 0.9,
+        model: 'meta/llama-3.1-8b-instruct',
+        max_tokens: 1024,
+        temperature: 0.2,
+        top_p: 0.7,
+        stream: false,
         messages,
       }),
     });
 
+    const rawText = await response.text();
+
     if (!response.ok) {
-      const error = await response.text();
-      console.error('NVIDIA API error:', error);
-      return res.status(response.status).json({ error: 'NVIDIA API error' });
+      console.error('NVIDIA API error:', response.status, rawText);
+      return res.status(response.status).json({ error: 'NVIDIA API error', detail: rawText });
     }
 
-    const data = await response.json();
+    const data = JSON.parse(rawText);
     res.json(data);
   } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: 'Failed to fetch from NVIDIA' });
+    console.error('Exception:', error.message);
+    res.status(500).json({ error: 'Failed to fetch from NVIDIA', detail: error.message });
   }
 });
 
