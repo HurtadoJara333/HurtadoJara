@@ -14,10 +14,19 @@ const navLinks = [
   { id: 'contacto',    label: 'Contacto' },
 ];
 
+const NAVBAR_HEIGHT = 64;
+
 const Navbar: React.FC<NavbarProps> = ({ activeSection, scrolled }) => {
-  const handleClick = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+const handleClick = (id: string) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (id === 'inicio') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+  const top = el.getBoundingClientRect().top + window.scrollY + NAVBAR_HEIGHT;
+  window.scrollTo({ top, behavior: 'smooth' });
+};
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>

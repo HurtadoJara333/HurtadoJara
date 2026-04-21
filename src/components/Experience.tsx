@@ -19,11 +19,11 @@ const experiences: ExperienceItem[] = [
     role: 'Web UI Developer',
     company: 'Globant · Cliente: GORE',
     location: 'Medellín, Colombia',
-    description: 'Desarrollo de componentes UI reutilizables en Vanilla JavaScript, SASS y Twig integrados en Drupal CMS. Implementación de métricas y dashboards de analítica en Adobe Experience Manager (AEM).',
+    description: 'Desarrollo de componentes UI reutilizables en Vanilla JavaScript, SASS y Twig integrados en Drupal CMS. Integración de herramientas de IA, agentes y automatización en sistemas web modernos, aprovechando LLMs para mejorar capacidades de producto y productividad.',
     achievements: [
       'Componentes reutilizables en Vanilla JS + SASS + Twig para Drupal',
       'Bibliotecas de componentes con Storybook para documentación de design system',
-      'Dashboards de métricas en Adobe Experience Manager (AEM)',
+      'Integración de agentes IA y flujos de automatización con LLMs',
       'Traducción de mockups Figma a componentes accesibles pixel-perfect',
     ],
     type: 'work',

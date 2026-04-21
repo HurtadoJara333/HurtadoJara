@@ -1,17 +1,29 @@
 .projects {
-  padding: var(--section-pad) 0;
+  padding: 0 0 var(--section-pad) 0;
   position: relative;
   background:
     radial-gradient(ellipse 80% 50% at 50% 0%, rgba(229,179,33,0.04) 0%, transparent 70%),
     var(--bg-dark);
 }
 
-.projects::before {
-  content: '';
-  display: block;
+.projects__divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(229,179,33,0.5), rgba(254,219,45,0.7), rgba(229,179,33,0.5), transparent);
+  background: linear-gradient(90deg,
+    transparent, rgba(229,179,33,0.4) 30%, rgba(254,219,45,0.6) 50%, rgba(229,179,33,0.4) 70%, transparent
+  );
+  position: relative;
   margin-bottom: var(--section-pad);
+}
+
+.projects__divider::after {
+  content: '◆';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  color: #E5B321;
+  background: var(--bg-dark);
+  padding: 0 1.2rem;
+  font-size: 0.65rem;
 }
 
 .projects__inner {
@@ -29,6 +41,10 @@
 }
 
 .projects--visible .projects__header { opacity: 1; transform: translateY(0); }
+
+.projects {
+  padding-top: 114px;
+}
 
 .projects__intro {
   font-family: var(--font-body);
@@ -222,6 +238,9 @@
 }
 
 @media (max-width: 768px) {
+  .projects {
+  padding-top: 80px;
+  }
   .project-card--featured { grid-column: span 1; }
   .projects__grid { grid-template-columns: 1fr; }
 }

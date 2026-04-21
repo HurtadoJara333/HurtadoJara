@@ -18,7 +18,7 @@ INFORMACIÓN DEL ARTESANO:
 - ROL: Fullstack Developer con 4+ años de experiencia
 
 EXPERIENCIA PROFESIONAL:
-1. Globant · GORE (Mar 2024–May 2025): Componentes UI en Vanilla JS, SASS, Twig para Drupal CMS. Storybook para design system. Dashboards en Adobe Experience Manager. Pixel-perfect desde Figma.
+1. Globant · GORE (Mar 2024–May 2025): Componentes UI en Vanilla JS, SASS, Twig para Drupal CMS. Storybook para design system. Integración de agentes IA y LLMs en flujos de desarrollo. Pixel-perfect desde Figma.
 2. Globant · Maryville Education / U2 (Ago 2023–Dic 2023): Migración completa de sitio web preservando fidelidad visual. WordPress Gutenberg blocks personalizados.
 3. Globant · Ernst & Young (May 2023–Ago 2023): Componentes UI con consistencia de marca estricta. Bug fixes frontend.
 4. Globant · Rockwell Automation RAIDER (Feb 2022–Nov 2022): IDE browser-based en Angular para programar microcontroladores industriales (IoT). Autoaprendizaje sin supervisión senior con entregas a producción.
@@ -34,7 +34,7 @@ SKILLS TÉCNICOS:
 - Lenguajes: JavaScript ES6+, TypeScript, HTML5, CSS3/SASS
 - Frameworks: React.js, Next.js, Angular, Node.js, RxJS
 - Testing: Jest, Storybook
-- CMS: Drupal, WordPress Gutenberg, Adobe Experience Manager (AEM)
+- CMS: Drupal, WordPress Gutenberg
 - DevOps: Docker, Jenkins, Linux (Ubuntu, Manjaro, Mint)
 - Bases de datos: MySQL, MongoDB
 - APIs: REST, GraphQL

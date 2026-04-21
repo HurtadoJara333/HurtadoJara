@@ -75,6 +75,10 @@
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeInUp 1s 0.2s ease forwards;
+  text-shadow:
+    0 0 20px rgba(0,0,0,0.9),
+    0 2px 4px rgba(0,0,0,0.95),
+    0 0 40px rgba(0,0,0,0.7);
 }
 
 .hero__name {
@@ -111,7 +115,10 @@
   color: #F4C26C;
   text-transform: uppercase;
   margin-bottom: 1.8rem;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  text-shadow:
+    0 0 20px rgba(0,0,0,0.9),
+    0 2px 4px rgba(0,0,0,0.95),
+    0 0 40px rgba(0,0,0,0.7);
   opacity: 0;
   animation: fadeInUp 1s 0.6s ease forwards;
 }
@@ -143,7 +150,10 @@
   font-style: italic;
   color: #c9a84c;
   margin-bottom: 2.5rem;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+  text-shadow:
+    0 0 20px rgba(0,0,0,0.9),
+    0 2px 4px rgba(0,0,0,0.95),
+    0 0 40px rgba(0,0,0,0.7);
   max-width: 400px;
   opacity: 0;
   animation: fadeInUp 1s 0.8s ease forwards;
@@ -151,7 +161,8 @@
 
 .hero__actions {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 1.2rem;
   flex-wrap: wrap;
   opacity: 0;
@@ -190,6 +201,10 @@
   letter-spacing: 3px;
   color: #a08040;
   text-transform: uppercase;
+  text-shadow:
+    0 0 20px rgba(0,0,0,0.9),
+    0 2px 4px rgba(0,0,0,0.95),
+    0 0 40px rgba(0,0,0,0.7);
 }
 
 @keyframes scrollPulse {
@@ -283,14 +298,18 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold-bright);
-  border: 1px solid rgba(254,219,45,0.5);
+  border: 1px solid rgba(254,219,45,0.75);
   padding: 0.9rem 2rem;
-  background: rgba(254,219,45,0.06);
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
   cursor: none;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-  text-shadow: 0 0 16px rgba(254,219,45,0.5);
+  text-shadow:
+    0 0 20px rgba(0,0,0,0.9),
+    0 2px 4px rgba(0,0,0,0.95),
+    0 0 16px rgba(254,219,45,0.5);
   box-shadow: 0 0 20px rgba(254,219,45,0.08), inset 0 0 20px rgba(254,219,45,0.04);
   animation: oracle-btn-pulse 3s ease-in-out infinite;
 }

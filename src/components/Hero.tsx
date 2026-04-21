@@ -405,12 +405,25 @@ const Hero: React.FC<HeroProps> = ({ onOpenOracle }) => {
   }, []);
 
   const toggleMute = () => {
-    mutedRef.current = !mutedRef.current;
-    setMuted(mutedRef.current);
-    if (audioRef.current) audioRef.current.volume = mutedRef.current ? 0 : 0.5;
+    const next = !mutedRef.current;
+    mutedRef.current = next;
+    setMuted(next);
+    if (audioRef.current) {
+      if (!next) {
+        // Gesto directo del usuario — iOS Safari permite play() aquí
+        audioRef.current.volume = 0.5;
+        audioRef.current.play().catch(() => {});
+      } else {
+        audioRef.current.volume = 0;
+      }
+    }
   };
-  const scrollTo = (id: string) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 64;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
 
   return (
     <div className="hero" ref={heroRef}>
@@ -451,9 +464,6 @@ const Hero: React.FC<HeroProps> = ({ onOpenOracle }) => {
         <div className="hero__actions">
           <button className="btn-primary" onClick={() => scrollTo("proyectos")}>
             Ver Proyectos <span className="hero__btn-arrow">↓</span>
-          </button>
-          <button className="btn-ghost" onClick={() => scrollTo("contacto")}>
-            Contactar
           </button>
           <button className="btn-oracle" onClick={onOpenOracle}>
             <span className="btn-oracle__rune">⚜</span>

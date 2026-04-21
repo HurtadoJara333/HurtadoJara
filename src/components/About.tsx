@@ -4,7 +4,7 @@ import './About.css';
 const skills = [
   { category: 'Frontend',   items: ['React.js', 'Next.js', 'Angular', 'TypeScript', 'CSS3 / SASS'] },
   { category: 'Backend',    items: ['Node.js', 'REST APIs', 'GraphQL', 'MySQL', 'MongoDB'] },
-  { category: 'CMS & Tools', items: ['Drupal', 'WordPress', 'AEM', 'Storybook', 'Figma'] },
+  { category: 'CMS & Tools', items: ['Drupal', 'WordPress', 'Storybook', 'Figma'] },
   { category: 'DevOps',     items: ['Docker', 'Jenkins', 'Git', 'Linux', 'OAuth 2.0'] },
 ];
 
@@ -31,8 +31,9 @@ const About: React.FC = () => {
           <span className="section-eyebrow">✦ El Artesano</span>
           <h2 className="section-title">Sobre mí</h2>
           <div className="about__body">
-            <p>Soy un Fullstack Developer de Medellín con más de 4 años construyendo interfaces de producción para clientes Fortune 500 en Globant — incluyendo Rockwell Automation y Ernst & Young.</p>
-            <p>Me especializo en React, TypeScript y Next.js, con experiencia sólida en Angular, Node.js y arquitecturas CMS como Drupal y AEM. Trabajo bien solo o liderando equipos, con fuerte enfoque en <em>accesibilidad</em>, <em>performance</em> y <em>diseño pixel-perfect</em>.</p>
+            <p>Soy un Web Developer de Medellín con más de 4 años construyendo interfaces de producción para clientes Fortune 500 en Globant — incluyendo Rockwell Automation y Ernst & Young.</p>
+            <p>Me especializo en React, TypeScript y Next.js, con experiencia sólida en Angular, Node.js y arquitecturas CMS como Drupal y WordPress. Trabajo bien solo o liderando equipos, con fuerte enfoque en <em>accesibilidad</em>, <em>performance</em> y <em>diseño pixel-perfect</em>.</p>
+            <p>Integro herramientas de IA, agentes y automatización en sistemas web modernos, aprovechando modelos de lenguaje para potenciar capacidades de producto y productividad del equipo.</p>
             <p>Cuando no estoy codificando, aprendo nuevas tecnologías, juego videojuegos con lore profundo, o exploro diseño visual.</p>
           </div>
           <div className="about__stats">

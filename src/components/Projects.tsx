@@ -107,6 +107,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className={`projects ${visible ? 'projects--visible' : ''}`} ref={sectionRef}>
+      <div className="projects__divider" />
       <div className="projects__inner">
         <div className="projects__header">
           <span className="section-eyebrow">✦ Obra Forjada</span>
